@@ -1,0 +1,9 @@
+//1.for all the filter queries we use to do find method
+//2.find method pure document m use hota hai
+
+aggregation pipeline ke mostly used operators hai:-
+$match == find
+conditons ko match karwane k liye use hogi
+$group = jab hume documents ki grouping karni hogi
+$projection = jab hume limited keys dikhani ho
+$unwind = jab hume array ko todna ho
