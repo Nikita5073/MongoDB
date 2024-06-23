@@ -354,4 +354,188 @@ db.users.aggregate(
   
 ]
 )
-
+-----------------------------------------------------------------------------
+11. Group users by city and calculate the average number of skills per user in each city.
+db.users.aggregate(
+  [
+  {
+    $project: {
+      city:1,
+      numberofSkills:{$size:"$skills"}
+    }
+  },
+  {
+    $group: {
+      _id: "$city",
+      averageSkills:{$avg:"$numberofSkills"}
+    }
+  },
+  {
+    $project: {
+      city:"$_id",
+      averageSkills:1
+    }
+  }
+  
+]
+)
+12. Group users by role and find the highest salary in each role.
+db.users.aggregate(
+  [
+  {
+    $group: {
+      _id: "$role",
+      maxSal:{$max:"$salary"}
+    }
+  }
+]
+)
+13. Group users by gender and calculate the total number of users for each gender.
+db.users.aggregate(
+  [
+  {
+    $group: {
+      _id: "$role",
+      maxSal:{$max:"$salary"}
+    }
+  }
+]
+)
+14. Group users by city and determine the average age for users in each city.
+db.users.aggregate(
+  [
+  {
+    $group: {
+      _id: "$city",
+      averageAge:{$avg:"$age"}
+    }
+  }
+]
+)
+15. Group users by role and gender, and calculate the average salary for each subgroup.
+db.users.aggregate(
+  [
+  {
+    $group: {
+      _id:{role:"$role",gender:"$gender"},
+      averageSal:{$avg:"$salary"}
+    }
+  },
+  {
+    $project: {
+      gender:"$_id.gender",
+      role:"$_id.role",
+      averageSal:1
+    }
+  }
+]
+)
+16. Group users by skills and determine the total number of users for each skill.
+db.users.aggregate(
+  [
+  {
+    $unwind:"$skills",
+  },
+  {
+    $group: {
+      _id:"$skills",
+      totalUsers:{$sum:1}
+    }
+  },
+  {
+    $project: {
+      skills:"$_id",
+      totalUsers:1
+    }
+  }
+]
+)
+17. Group users by age and find the maximum salary for each age group.
+db.users.aggregate(
+  [
+  {
+    $group: {
+      _id:"$age",
+      maxSal:{$max:"salary"}
+    }
+  },
+  {
+    $project: {
+      age:"$_id",
+      maxSal:1
+    }
+  }
+]
+)
+18. Group users by role and calculate the total number of users with more than three skills.
+db.users.aggregate(
+  [
+  {
+    $project: {
+      role:1,
+      numberofSkills:{$size:"$skills"}
+    }
+  },
+  {
+    $match: {
+      numberofSkills:{$gt:2}
+    }
+  },
+  {
+    $group: {
+      _id:"$role",
+      totalUsers:{$sum:1}
+    }
+  },
+  {
+    $project: {
+      role:"$_id",
+      totalUsers:1
+    }
+  }
+]
+)
+19. Group users by gender and city, and find the average number of skills per user in each subgroup.
+db.users.aggregate(
+  [
+  {
+    $project: {
+      gender:1,
+      city:1,
+      numberofSkills:{$size:"$skills"}
+    }
+  },
+  {
+    $group: {
+      _id:{city:"$city",gender:"$gender"},
+      averageSkills:{$avg:"$numberofSkills"}
+    }
+  },
+  {
+    $project: {
+      gender:"$_id.gender",
+      city:"$_id.city",
+      averageSkills:1
+    }
+  }
+]
+)
+20. Group users by role and determine the highest and lowest salaries for each role.
+db.users.aggregate(
+  [
+  {
+    $group: {
+      _id:"$role",
+      maxSal:{$max:"$salary"},
+      minSal:{$min:"$salary"}
+    }
+  },
+  {
+    $project: {
+      role:"$_id",
+      maxSal:1,
+      minSal:1
+    }
+  }
+]
+)
