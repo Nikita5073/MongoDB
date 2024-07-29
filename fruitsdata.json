@@ -1,0 +1,137 @@
+db.fruits.insertMany([
+    {
+        "fruit_id": 201,
+        "name": "Apple",
+        "description": "Fresh and juicy apples, perfect for snacking.",
+        "varieties": ["Gala", "Fuji", "Granny Smith", "Honeycrisp"],
+        "colors": ["Red", "Green", "Yellow"],
+        "price_per_kg": 3,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 202,
+        "name": "Banana",
+        "description": "Sweet and ripe bananas, ideal for smoothies and desserts.",
+        "varieties": ["Cavendish", "Red", "Plantain", "Burro"],
+        "colors": ["Yellow", "Green", "Red"],
+        "price_per_kg": 1,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 203,
+        "name": "Orange",
+        "description": "Citrusy and refreshing oranges, great for juice.",
+        "varieties": ["Navel", "Valencia", "Blood Orange", "Cara Cara"],
+        "colors": ["Orange"],
+        "price_per_kg": 2.5,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 204,
+        "name": "Strawberry",
+        "description": "Sweet and succulent strawberries, perfect for desserts.",
+        "varieties": ["June-bearing", "Ever-bearing", "Day-neutral"],
+        "colors": ["Red"],
+        "price_per_kg": 6,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 205,
+        "name": "Grapes",
+        "description": "Juicy and sweet grapes, ideal for snacking and wine-making.",
+        "varieties": ["Concord", "Thompson Seedless", "Red Globe", "Moon Drops"],
+        "colors": ["Green", "Red", "Black"],
+        "price_per_kg": 4,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 206,
+        "name": "Pineapple",
+        "description": "Tropical and tangy pineapples, great for desserts and drinks.",
+        "varieties": ["Smooth Cayenne", "Red Spanish", "Queen", "Sugarloaf"],
+        "colors": ["Brown", "Yellow"],
+        "price_per_kg": 3.5,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 207,
+        "name": "Mango",
+        "description": "Sweet and juicy mangoes, perfect for smoothies and desserts.",
+        "varieties": ["Alphonso", "Haden", "Kent", "Tommy Atkins"],
+        "colors": ["Yellow", "Red", "Green"],
+        "price_per_kg": 5,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 208,
+        "name": "Blueberry",
+        "description": "Sweet and nutritious blueberries, ideal for baking and snacking.",
+        "varieties": ["Highbush", "Lowbush", "Rabbiteye"],
+        "colors": ["Blue"],
+        "price_per_kg": 7,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 209,
+        "name": "Watermelon",
+        "description": "Refreshing and hydrating watermelons, perfect for summer.",
+        "varieties": ["Seedless", "Picnic", "Icebox", "Yellow Flesh"],
+        "colors": ["Green", "Red", "Yellow"],
+        "price_per_kg": 1.2,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 210,
+        "name": "Kiwi",
+        "description": "Tangy and sweet kiwis, great for salads and desserts.",
+        "varieties": ["Hayward", "Hardy", "Baby Kiwi"],
+        "colors": ["Brown", "Green"],
+        "price_per_kg": 8,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 211,
+        "name": "Peach",
+        "description": "Juicy and sweet peaches, ideal for baking and snacking.",
+        "varieties": ["Clingstone", "Freestone", "Donut"],
+        "colors": ["Yellow", "Red", "White"],
+        "price_per_kg": 4.5,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 212,
+        "name": "Plum",
+        "description": "Sweet and tart plums, perfect for snacking and cooking.",
+        "varieties": ["Black", "Red", "Yellow"],
+        "colors": ["Purple", "Red", "Yellow"],
+        "price_per_kg": 3.8,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 213,
+        "name": "Cherry",
+        "description": "Sweet and tart cherries, great for baking and snacking.",
+        "varieties": ["Bing", "Rainier", "Montmorency"],
+        "colors": ["Red", "Yellow"],
+        "price_per_kg": 10,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 214,
+        "name": "Pear",
+        "description": "Juicy and sweet pears, ideal for snacking and cooking.",
+        "varieties": ["Bartlett", "Bosc", "Anjou"],
+        "colors": ["Green", "Yellow", "Red"],
+        "price_per_kg": 2.5,
+        "category": "Fruits"
+    },
+    {
+        "fruit_id": 215,
+        "name": "Papaya",
+        "description": "Tropical and sweet papayas, perfect for smoothies and salads.",
+        "varieties": ["Hawaiian", "Mexican"],
+        "colors": ["Yellow", "Orange"],
+        "price_per_kg": 3.2,
+        "category": "Fruits"
+    }
+]);

@@ -679,5 +679,18 @@ db.users.aggregate(
 )
 10. Group users by age and determine the average number of skills per user in each age group.
 db.users.aggregate(
-  
+  [
+  {
+    $group: {
+      _id:"$age",
+      averageSkills:{$avg:{$size:"$skills"}}
+  }
+  },
+    {
+    $project: {
+      age:"$_id",
+      averageSkills:1
+    }
+    }
+]
 )
